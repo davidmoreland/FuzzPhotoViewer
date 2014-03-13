@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555ADD5518CFDC4F00B82AFD /* FTBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555ADD5418CFDC4F00B82AFD /* FTBWebViewController.m */; };
+		555ADD5818D042B700B82AFD /* FTBImageWebTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 555ADD5718D042B700B82AFD /* FTBImageWebTransfer.m */; };
 		556A38FA18CE91D700986299 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A38F918CE91D700986299 /* Foundation.framework */; };
 		556A38FC18CE91D700986299 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A38FB18CE91D700986299 /* CoreGraphics.framework */; };
 		556A38FE18CE91D700986299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A38FD18CE91D700986299 /* UIKit.framework */; };
@@ -14,14 +16,21 @@
 		556A390618CE91D700986299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A390518CE91D700986299 /* main.m */; };
 		556A390A18CE91D700986299 /* FTBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A390918CE91D700986299 /* FTBAppDelegate.m */; };
 		556A390D18CE91D700986299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 556A390B18CE91D700986299 /* Main.storyboard */; };
-		556A391018CE91D700986299 /* FTBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A390F18CE91D700986299 /* FTBFirstViewController.m */; };
-		556A391318CE91D700986299 /* FTBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A391218CE91D700986299 /* FTBSecondViewController.m */; };
 		556A391518CE91D700986299 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556A391418CE91D700986299 /* Images.xcassets */; };
 		556A391C18CE91D700986299 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A391B18CE91D700986299 /* XCTest.framework */; };
 		556A391D18CE91D700986299 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A38F918CE91D700986299 /* Foundation.framework */; };
 		556A391E18CE91D700986299 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A38FD18CE91D700986299 /* UIKit.framework */; };
 		556A392618CE91D700986299 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 556A392418CE91D700986299 /* InfoPlist.strings */; };
 		556A392818CE91D700986299 /* FuzzTestBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 556A392718CE91D700986299 /* FuzzTestBasicTests.m */; };
+		559C9F0518D17311002ACB61 /* FTBTextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C9F0418D17311002ACB61 /* FTBTextTableViewController.m */; };
+		559C9F0818D1735C002ACB61 /* FTBPhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C9F0718D1735C002ACB61 /* FTBPhotoTableViewController.m */; };
+		559C9F0D18D179D8002ACB61 /* FTBPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C9F0A18D179D8002ACB61 /* FTBPhotoCell.m */; };
+		559C9F0E18D179D8002ACB61 /* FTBTextContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559C9F0C18D179D8002ACB61 /* FTBTextContentCell.m */; };
+		55DE517018CF671C000E9F5B /* DCMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE516D18CF671C000E9F5B /* DCMCoreDataManager.m */; };
+		55DE517118CF671C000E9F5B /* DCMWebTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE516E18CF671C000E9F5B /* DCMWebTransfer.m */; };
+		55DE517418CF67A1000E9F5B /* FuzzTestBasic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55DE517218CF67A1000E9F5B /* FuzzTestBasic.xcdatamodeld */; };
+		55DE517A18CF7DBD000E9F5B /* FTB_ALLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE517918CF7DBD000E9F5B /* FTB_ALLTableViewController.m */; };
+		55DE518218CF979B000E9F5B /* FTBAllContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DE518118CF979B000E9F5B /* FTBAllContentCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		555ADD5318CFDC4F00B82AFD /* FTBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBWebViewController.h; sourceTree = "<group>"; };
+		555ADD5418CFDC4F00B82AFD /* FTBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBWebViewController.m; sourceTree = "<group>"; };
+		555ADD5618D0423800B82AFD /* FTBImageWebTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBImageWebTransfer.h; sourceTree = "<group>"; };
+		555ADD5718D042B700B82AFD /* FTBImageWebTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBImageWebTransfer.m; sourceTree = "<group>"; };
 		556A38F618CE91D700986299 /* FuzzTestBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzTestBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556A38F918CE91D700986299 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		556A38FB18CE91D700986299 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +59,30 @@
 		556A390818CE91D700986299 /* FTBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBAppDelegate.h; sourceTree = "<group>"; };
 		556A390918CE91D700986299 /* FTBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBAppDelegate.m; sourceTree = "<group>"; };
 		556A390C18CE91D700986299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		556A390E18CE91D700986299 /* FTBFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBFirstViewController.h; sourceTree = "<group>"; };
-		556A390F18CE91D700986299 /* FTBFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBFirstViewController.m; sourceTree = "<group>"; };
-		556A391118CE91D700986299 /* FTBSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBSecondViewController.h; sourceTree = "<group>"; };
-		556A391218CE91D700986299 /* FTBSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBSecondViewController.m; sourceTree = "<group>"; };
 		556A391418CE91D700986299 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		556A391A18CE91D700986299 /* FuzzTestBasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzTestBasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		556A391B18CE91D700986299 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		556A392318CE91D700986299 /* FuzzTestBasicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FuzzTestBasicTests-Info.plist"; sourceTree = "<group>"; };
 		556A392518CE91D700986299 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		556A392718CE91D700986299 /* FuzzTestBasicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzTestBasicTests.m; sourceTree = "<group>"; };
+		559C9F0318D17311002ACB61 /* FTBTextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTBTextTableViewController.h; path = Controllers/FTBTextTableViewController.h; sourceTree = "<group>"; };
+		559C9F0418D17311002ACB61 /* FTBTextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTBTextTableViewController.m; path = Controllers/FTBTextTableViewController.m; sourceTree = "<group>"; };
+		559C9F0618D1735C002ACB61 /* FTBPhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBPhotoTableViewController.h; sourceTree = "<group>"; };
+		559C9F0718D1735C002ACB61 /* FTBPhotoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTBPhotoTableViewController.m; sourceTree = "<group>"; };
+		559C9F0918D179D8002ACB61 /* FTBPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTBPhotoCell.h; path = Views/FTBPhotoCell.h; sourceTree = "<group>"; };
+		559C9F0A18D179D8002ACB61 /* FTBPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTBPhotoCell.m; path = Views/FTBPhotoCell.m; sourceTree = "<group>"; };
+		559C9F0B18D179D8002ACB61 /* FTBTextContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTBTextContentCell.h; path = Views/FTBTextContentCell.h; sourceTree = "<group>"; };
+		559C9F0C18D179D8002ACB61 /* FTBTextContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTBTextContentCell.m; path = Views/FTBTextContentCell.m; sourceTree = "<group>"; };
+		55DE516C18CF671C000E9F5B /* DCMCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMCoreDataManager.h; sourceTree = "<group>"; };
+		55DE516D18CF671C000E9F5B /* DCMCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMCoreDataManager.m; sourceTree = "<group>"; };
+		55DE516E18CF671C000E9F5B /* DCMWebTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMWebTransfer.m; sourceTree = "<group>"; };
+		55DE516F18CF671C000E9F5B /* DCMWebTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMWebTransfer.h; sourceTree = "<group>"; };
+		55DE517318CF67A1000E9F5B /* FuzzTestBasic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuzzTestBasic.xcdatamodel; sourceTree = "<group>"; };
+		55DE517518CF6931000E9F5B /* FTBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBConstants.h; sourceTree = "<group>"; };
+		55DE517818CF7DBD000E9F5B /* FTB_ALLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTB_ALLTableViewController.h; path = Controllers/FTB_ALLTableViewController.h; sourceTree = "<group>"; };
+		55DE517918CF7DBD000E9F5B /* FTB_ALLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTB_ALLTableViewController.m; path = Controllers/FTB_ALLTableViewController.m; sourceTree = "<group>"; };
+		55DE518018CF979B000E9F5B /* FTBAllContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FTBAllContentCell.h; path = Views/FTBAllContentCell.h; sourceTree = "<group>"; };
+		55DE518118CF979B000E9F5B /* FTBAllContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTBAllContentCell.m; path = Views/FTBAllContentCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,15 +142,16 @@
 		556A38FF18CE91D700986299 /* FuzzTestBasic */ = {
 			isa = PBXGroup;
 			children = (
+				55DE517F18CF9766000E9F5B /* Views */,
+				556A390B18CE91D700986299 /* Main.storyboard */,
+				55DE517B18CF7DCC000E9F5B /* Controllers */,
 				556A390818CE91D700986299 /* FTBAppDelegate.h */,
 				556A390918CE91D700986299 /* FTBAppDelegate.m */,
-				556A390B18CE91D700986299 /* Main.storyboard */,
-				556A390E18CE91D700986299 /* FTBFirstViewController.h */,
-				556A390F18CE91D700986299 /* FTBFirstViewController.m */,
-				556A391118CE91D700986299 /* FTBSecondViewController.h */,
-				556A391218CE91D700986299 /* FTBSecondViewController.m */,
+				55DE516C18CF671C000E9F5B /* DCMCoreDataManager.h */,
+				55DE516D18CF671C000E9F5B /* DCMCoreDataManager.m */,
 				556A391418CE91D700986299 /* Images.xcassets */,
 				556A390018CE91D700986299 /* Supporting Files */,
+				55DE517218CF67A1000E9F5B /* FuzzTestBasic.xcdatamodeld */,
 			);
 			path = FuzzTestBasic;
 			sourceTree = "<group>";
@@ -131,6 +159,7 @@
 		556A390018CE91D700986299 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				55DE517518CF6931000E9F5B /* FTBConstants.h */,
 				556A390118CE91D700986299 /* FuzzTestBasic-Info.plist */,
 				556A390218CE91D700986299 /* InfoPlist.strings */,
 				556A390518CE91D700986299 /* main.m */,
@@ -155,6 +184,38 @@
 				556A392418CE91D700986299 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55DE517B18CF7DCC000E9F5B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55DE516E18CF671C000E9F5B /* DCMWebTransfer.m */,
+				55DE516F18CF671C000E9F5B /* DCMWebTransfer.h */,
+				555ADD5618D0423800B82AFD /* FTBImageWebTransfer.h */,
+				555ADD5718D042B700B82AFD /* FTBImageWebTransfer.m */,
+				55DE517818CF7DBD000E9F5B /* FTB_ALLTableViewController.h */,
+				55DE517918CF7DBD000E9F5B /* FTB_ALLTableViewController.m */,
+				559C9F0318D17311002ACB61 /* FTBTextTableViewController.h */,
+				559C9F0418D17311002ACB61 /* FTBTextTableViewController.m */,
+				555ADD5318CFDC4F00B82AFD /* FTBWebViewController.h */,
+				555ADD5418CFDC4F00B82AFD /* FTBWebViewController.m */,
+				559C9F0618D1735C002ACB61 /* FTBPhotoTableViewController.h */,
+				559C9F0718D1735C002ACB61 /* FTBPhotoTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		55DE517F18CF9766000E9F5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				559C9F0918D179D8002ACB61 /* FTBPhotoCell.h */,
+				559C9F0A18D179D8002ACB61 /* FTBPhotoCell.m */,
+				559C9F0B18D179D8002ACB61 /* FTBTextContentCell.h */,
+				559C9F0C18D179D8002ACB61 /* FTBTextContentCell.m */,
+				55DE518018CF979B000E9F5B /* FTBAllContentCell.h */,
+				55DE518118CF979B000E9F5B /* FTBAllContentCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +266,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "David Moreland";
 				TargetAttributes = {
+					556A38F518CE91D700986299 = {
+						DevelopmentTeam = QZJ2GF69ZP;
+					};
 					556A391918CE91D700986299 = {
 						TestTargetID = 556A38F518CE91D700986299;
 					};
@@ -255,10 +319,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559C9F0E18D179D8002ACB61 /* FTBTextContentCell.m in Sources */,
+				55DE517418CF67A1000E9F5B /* FuzzTestBasic.xcdatamodeld in Sources */,
+				559C9F0518D17311002ACB61 /* FTBTextTableViewController.m in Sources */,
 				556A390618CE91D700986299 /* main.m in Sources */,
+				555ADD5518CFDC4F00B82AFD /* FTBWebViewController.m in Sources */,
+				55DE517A18CF7DBD000E9F5B /* FTB_ALLTableViewController.m in Sources */,
 				556A390A18CE91D700986299 /* FTBAppDelegate.m in Sources */,
-				556A391018CE91D700986299 /* FTBFirstViewController.m in Sources */,
-				556A391318CE91D700986299 /* FTBSecondViewController.m in Sources */,
+				559C9F0818D1735C002ACB61 /* FTBPhotoTableViewController.m in Sources */,
+				559C9F0D18D179D8002ACB61 /* FTBPhotoCell.m in Sources */,
+				555ADD5818D042B700B82AFD /* FTBImageWebTransfer.m in Sources */,
+				55DE517118CF671C000E9F5B /* DCMWebTransfer.m in Sources */,
+				55DE518218CF979B000E9F5B /* FTBAllContentCell.m in Sources */,
+				55DE517018CF671C000E9F5B /* DCMCoreDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FuzzTestBasic/FuzzTestBasic-Prefix.pch";
 				INFOPLIST_FILE = "FuzzTestBasic/FuzzTestBasic-Info.plist";
@@ -398,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FuzzTestBasic/FuzzTestBasic-Prefix.pch";
 				INFOPLIST_FILE = "FuzzTestBasic/FuzzTestBasic-Info.plist";
@@ -467,6 +542,7 @@
 				556A392D18CE91D700986299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		556A392E18CE91D700986299 /* Build configuration list for PBXNativeTarget "FuzzTestBasicTests" */ = {
 			isa = XCConfigurationList;
@@ -475,8 +551,23 @@
 				556A393018CE91D700986299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55DE517218CF67A1000E9F5B /* FuzzTestBasic.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55DE517318CF67A1000E9F5B /* FuzzTestBasic.xcdatamodel */,
+			);
+			currentVersion = 55DE517318CF67A1000E9F5B /* FuzzTestBasic.xcdatamodel */;
+			name = FuzzTestBasic.xcdatamodeld;
+			path = Model/FuzzTestBasic.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 556A38EE18CE91D700986299 /* Project object */;
 }

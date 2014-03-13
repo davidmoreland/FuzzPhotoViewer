@@ -12,4 +12,13 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+//Model
+@property (readonly, strong, nonatomic) NSManagedObjectContext *appDataMOC;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) NSArray *mainFuzzDataArray;
+//@property (strong, nonatomic) NS
+@property (strong, nonatomic) NSMutableArray *photoArray;
+
 @end

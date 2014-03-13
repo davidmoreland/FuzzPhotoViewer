@@ -7,12 +7,23 @@
 //
 
 #import "FTBAppDelegate.h"
+#import "DCMCoreDataManager.h"
+#import "DCMWebTransfer.h"
 
 @implementation FTBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // init array to store photos with an arbitrary space of 5
+    self.photoArray = [[NSMutableArray alloc]initWithCapacity:5];
+    NSLog(@"PHOTOARRAY: appDelegate: %@",self.photoArray);
+    // Fetch Data
+    DCMWebTransfer *fetchFPTData = [[DCMWebTransfer alloc] init];
+    
+    self.mainFuzzDataArray = fetchFPTData.fuzzDataArray;
+    
+    NSLog(@"Main Data Array Count: %lu", (unsigned long)[self.mainFuzzDataArray count]);
+    
     return YES;
 }
 							
