@@ -3,8 +3,8 @@
 @interface FTBImageMWebTransfer : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDownloadDelegate>
 
 @property (nonatomic, strong) FTB_ALLTableViewController *allTVC;
-@property (nonatomic) NSIndexPath *indexPath;
-
+//@property (nonatomic) NSIndexPath *indexPath;
+@property (nonatomic) int row;
 -(BOOL)cancelDownload;
 -(void)getImage:(NSString *)imageURLString;
 

@@ -19,8 +19,7 @@ static NSString *FuzzTestDataURLString = @"http://dev.fuzzproductions.com/Mobile
   
 
 }
-//@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-//@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+
 @property (nonatomic)double downloadProgress;
 
 @property (nonatomic) NSURLSession *session1;

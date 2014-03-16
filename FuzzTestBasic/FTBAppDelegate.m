@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // init array to store photos with an arbitrary space of 5
-    self.photoArray = [[NSMutableArray alloc]initWithCapacity:5];
+  //  self.photoArray = [[NSMutableArray alloc]initWithObjects: @"1",nil];
     NSLog(@"PHOTOARRAY: appDelegate: %@",self.photoArray);
     // Fetch Data
     DCMWebTransfer *fetchFPTData = [[DCMWebTransfer alloc] init];

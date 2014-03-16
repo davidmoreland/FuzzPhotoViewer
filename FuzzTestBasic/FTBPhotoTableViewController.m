@@ -11,6 +11,7 @@
 #import "FTBImageWebTransfer.h"
 
 @interface FTBPhotoTableViewController ()
+
 @end
 
 @implementation FTBPhotoTableViewController
@@ -21,12 +22,6 @@
     [super viewDidLoad];
     
      self.appDelegate = (FTBAppDelegate *) [[UIApplication sharedApplication] delegate];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,38 +66,65 @@
 
 -(UITableViewCell *)configureCell:(FTBPhotoCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    int tablerow = indexPath.row;
     
-    NSDictionary *cellDataDictionary = self.appDelegate.mainFuzzDataArray[indexPath.row];
+    NSDictionary *cellDataDictionary = self.appDelegate.mainFuzzDataArray[tablerow];
       NSString *dataType = [cellDataDictionary objectForKey:   @"type"];
     
-    if([dataType isEqualToString:@"image"])
+    // image loading
+        if([dataType isEqualToString:@"image"])
     {
+        NSString *dataURL = [cellDataDictionary objectForKey:@"data"];
+
         //get image from web
-        [self loadImageFromURL:[cellDataDictionary objectForKey:@"data"] atIndexRow:indexPath];
-       
-        if(indexPath.row == [self.appDelegate.photoArray count])
+        [self loadImageFromURL:dataType atIndexRow:tablerow];
+        if([self.appDelegate.photoArray count] == indexPath.row +1)
         {
-        cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
-        
-        NSLog(@"______________________");
-        NSLog(@"______________________");
-        NSLog(@"Image: %@",cell.imageView.image);
-        NSLog(@"______________________");
-        NSLog(@"______________________");
+            //   cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
+            
+            NSLog(@"______________________");
+            NSLog(@"______________________");
+            NSLog(@"Image: %@",self.appDelegate.photoArray[indexPath.row]);
+            NSLog(@"______________________");
+            NSLog(@"______________________");
+            
+            cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
+        }
+    }
+    else
+    {
+        if(!self.appDelegate.photoArray)
+        {
+            self.appDelegate.photoArray = [[NSMutableArray alloc]init];
+            self.appDelegate.photoArray[indexPath.row] = @"n/a";
+            
+        }
+        else
+        {
+            //   self.appDelegate.photoArray[indexPath.row] = @"n/a";
         }
     }
     //   cell.dataImage = [UIImage imageWithData:;;]
     return cell;
+           return cell;
 }
 
 
--(void)loadImageFromURL:(NSString *)URLString atIndexRow:(NSIndexPath *)indexPath
+-(UIWebView *)loadImageFromURL:(NSString *)URLString atIndexRow:(int)row
 {
-    FTBImageMWebTransfer *imageDownloader = [[FTBImageMWebTransfer alloc]init];
-  //  imageDownloader.allTVC = self;
-    imageDownloader.indexPath = indexPath;
     
-    [imageDownloader getImage:URLString];
+    
+   NSURL *url = [NSURL URLWithString:URLString];
+    
+    NSURLRequest *urlRequest =[NSURLRequest requestWithURL:url];
+   
+    [NSURLConnection sendAsynchronousRequest:urlRequest queue:nil completionHandler:nil];
+    
+    //[self.webView loadRequest:self.urlRequest];
+    UIWebView *imageView;
+    [imageView loadRequest:urlRequest];
+    
+    return imageView;
 }
 
 

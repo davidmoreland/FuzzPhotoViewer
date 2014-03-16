@@ -1,5 +1,5 @@
 //
-//  FTBAllContentCell.m
+//  FTBPhotoCell.m
 //  FuzzTestBasic
 //
 //  Created by Dave on 3/11/14.
@@ -7,6 +7,14 @@
 //
 
 #import "FTBPhotoCell.h"
+@interface FTBPhotoCell()
+{
+    
+}
+
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+
+@end
 
 @implementation FTBPhotoCell
 
@@ -14,8 +22,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
-        self.imageView.image = nil;
+     
     }
     return self;
 }

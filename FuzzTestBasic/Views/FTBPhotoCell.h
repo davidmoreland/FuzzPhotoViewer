@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FTBPhotoCell : UITableViewCell
-@property (nonatomic, strong) NSString *description;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

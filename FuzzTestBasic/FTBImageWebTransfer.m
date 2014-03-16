@@ -13,7 +13,7 @@
 
 @interface FTBImageMWebTransfer ()
 {
-
+    NSMutableArray *photoArray;
 }
 //@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 //@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
@@ -161,23 +161,48 @@
     NSError *error;
     
     // Make sure we overwrite anything that's already there
-    [fileManager removeItemAtURL:destinationPath error:NULL];
+ //   [fileManager removeItemAtURL:destinationPath error:NULL];
     BOOL success = [fileManager copyItemAtURL:location toURL:destinationPath error:&error];
     
-    if (success)
+    if (!error)
     {
-        dispatch_async(dispatch_get_main_queue(), ^{
+     //   dispatch_async(dispatch_get_main_queue(), ^{
+            
+      //  NSData *data = [NSData dataWithContentsOfURL:location];
+        NSData *data = [NSData dataWithContentsOfFile:[destinationPath path]];
+        
+           UIImage *dataImage = [UIImage imageWithData:data];
+        //    NSLog(@"dataImage %@",dataImage);
+            
         UIImage *image = [UIImage imageWithContentsOfFile:[destinationPath path]];
-            self.imageView.image = image;
-            self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-            self.imageView.hidden = NO;
-        });
+            NSLog(@"image %@",image);
+
+            if(!self.appDelegate.photoArray)
+            {
+                if(dataImage)
+                {
+                    self.appDelegate.photoArray = [[NSMutableArray alloc]initWithObjects:dataImage, nil];
+                NSLog(@"ImageTransfer - PhotoArray: %@",self.appDelegate.photoArray[self.row]);
+                }
+            }
+            else
+            {
+                if(dataImage)
+                {
+                    self.appDelegate.photoArray[self.row] = dataImage;
+                NSLog(@"ImageTransfer - PhotoArray: %@",self.appDelegate.photoArray[self.row]);
+                }
+            }
+            
+
+       // });
+
     }
     else
     {
         NSLog(@"Couldn't copy the downloaded file");
     }
-    
+    session = nil;
 }
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes {
@@ -225,5 +250,6 @@
 
 -(void)dealloc
 {
+    
 }
 @end

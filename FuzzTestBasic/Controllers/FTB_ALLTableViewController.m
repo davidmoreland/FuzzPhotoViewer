@@ -81,36 +81,57 @@
 
 -(UITableViewCell *)configureCell:(FTBAllContentCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    int tableRow = indexPath.row;
     
     NSDictionary *cellDataDictionary = self.appDelegate.mainFuzzDataArray[indexPath.row];
     cell.dataID.text =[cellDataDictionary objectForKey:@"id"];
     cell.dataType.text = [cellDataDictionary objectForKey:   @"type"];
     cell.data.text = [cellDataDictionary objectForKey:@"data"];
     
+    
+    
+    
     if([cell.dataType.text isEqualToString:@"image"])
     {
         //get image from web
-        [self loadImageFromURL:[cellDataDictionary objectForKey:@"data"] atIndexRow:indexPath];
+        [self loadImageFromURL:[cellDataDictionary objectForKey:@"data"] atIndexRow:tableRow];
+        if([self.appDelegate.photoArray count] == indexPath.row +1)
+        {
+     //   cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
         
-        cell.imageView.image = self.cellImageView.image;
-        
         NSLog(@"______________________");
         NSLog(@"______________________");
-        NSLog(@"Image: %@",cell.imageView.image);
+    NSLog(@"Image: %@",self.appDelegate.photoArray[indexPath.row]);
         NSLog(@"______________________");
         NSLog(@"______________________");
-
+          
+            cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
+        }
     }
-    
+    else
+    {
+        if(!self.appDelegate.photoArray)
+        {
+            self.appDelegate.photoArray = [[NSMutableArray alloc]init];
+            self.appDelegate.photoArray[indexPath.row] = @"n/a";
+
+        }
+        else
+        {
+       //   self.appDelegate.photoArray[indexPath.row] = @"n/a";
+        }
+    }
  //   cell.dataImage = [UIImage imageWithData:;;]
     return cell;
 }
 
--(void)loadImageFromURL:(NSString *)URLString atIndexRow:(NSIndexPath *)indexPath
+-(void)loadImageFromURL:(NSString *)URLString atIndexRow:(int)row
 {
     FTBImageMWebTransfer *imageDownloader = [[FTBImageMWebTransfer alloc]init];
     imageDownloader.allTVC = self;
-    imageDownloader.indexPath = indexPath;
+    imageDownloader.row = row;
+    
+    NSLog(@"loadImage row: %d", row);
     
     [imageDownloader getImage:URLString];
 }
