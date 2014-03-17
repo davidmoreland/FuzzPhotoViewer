@@ -57,9 +57,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5Ne-Hw-9yy" kind="relationship" relationship="viewControllers" id="ZSI-yT-DcN"/>
-                        <segue destination="Nv9-b3-myf" kind="relationship" relationship="viewControllers" id="30f-oy-TCN"/>
                         <segue destination="dWE-Bx-rSZ" kind="relationship" relationship="viewControllers" id="oSk-go-Pdd"/>
+                        <segue destination="Nv9-b3-myf" kind="relationship" relationship="viewControllers" id="30f-oy-TCN"/>
+                        <segue destination="5Ne-Hw-9yy" kind="relationship" relationship="viewControllers" id="ZSI-yT-DcN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>

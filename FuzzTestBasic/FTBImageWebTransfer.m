@@ -19,8 +19,6 @@
 //@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (nonatomic)double downloadProgress;
 
-@property (nonatomic) NSURLSession *session1;
-
 @property (nonatomic) NSURLSessionDownloadTask *downloadTask1;
 
 @property (nonatomic, strong) NSDate *startDownloadTime;
@@ -94,7 +92,7 @@
         if (error == nil)
         {
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-                self.session1 = nil;
+            session = nil;
             }
             else
             {  // Download is IMAGE
@@ -250,6 +248,6 @@
 
 -(void)dealloc
 {
-    
+  
 }
 @end

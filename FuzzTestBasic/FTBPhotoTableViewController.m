@@ -34,14 +34,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.appDelegate.mainFuzzDataArray count];
 }
@@ -77,14 +75,15 @@
         NSString *dataURL = [cellDataDictionary objectForKey:@"data"];
 
         //get image from web
-        [self loadImageFromURL:dataType atIndexRow:tablerow];
-        if([self.appDelegate.photoArray count] == indexPath.row +1)
+        [self loadImageFromURL:dataURL atIndexRow:tablerow];
+        
+        if([self.appDelegate.photoArray count] >= tablerow)
         {
             //   cell.imageView.image = self.appDelegate.photoArray[indexPath.row];
             
             NSLog(@"______________________");
             NSLog(@"______________________");
-            NSLog(@"Image: %@",self.appDelegate.photoArray[indexPath.row]);
+            NSLog(@"Photo TABLE Image: %@",self.appDelegate.photoArray[tablerow]);
             NSLog(@"______________________");
             NSLog(@"______________________");
             
@@ -110,21 +109,15 @@
 }
 
 
--(UIWebView *)loadImageFromURL:(NSString *)URLString atIndexRow:(int)row
+-(void)loadImageFromURL:(NSString *)URLString atIndexRow:(int)row
 {
+    FTBImageMWebTransfer *imageDownloader = [[FTBImageMWebTransfer alloc]init];
+   // imageDownloader.allTVC = self;
+    imageDownloader.row = row;
     
+    NSLog(@"loadImage row: %d", row);
     
-   NSURL *url = [NSURL URLWithString:URLString];
-    
-    NSURLRequest *urlRequest =[NSURLRequest requestWithURL:url];
-   
-    [NSURLConnection sendAsynchronousRequest:urlRequest queue:nil completionHandler:nil];
-    
-    //[self.webView loadRequest:self.urlRequest];
-    UIWebView *imageView;
-    [imageView loadRequest:urlRequest];
-    
-    return imageView;
+    [imageDownloader getImage:URLString];
 }
 
 

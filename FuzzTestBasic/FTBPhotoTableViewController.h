@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FTBPhotoTableViewController : UITableViewController
+@interface FTBPhotoTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
 @property (nonatomic, strong) FTBAppDelegate *appDelegate;
 @end
